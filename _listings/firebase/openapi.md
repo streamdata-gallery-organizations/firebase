@@ -3,14 +3,11 @@ swagger: "2.0"
 x-collection-name: Firebase
 x-complete: 1
 info:
-  title: Firebase Rules
-  description: creates-and-manages-rules-that-determine-when-a-firebase-rulesenabled-service-should-permit-a-request
-  contact:
-    name: Google
-    url: https://google.com
+  title: Firebase
+  description: you-can-use-any-firebase-database-url-as-a-rest-endpoint--all-you-need-to-do-is-append--json-to-the-end-of-the-url-and-send-a-request-from-your-favorite-https-client-
   version: 1.0.0
-host: firebaserules.googleapis.com
-basePath: v1/
+host: '{project_id].firebaseio.co}'
+basePath: /
 schemes:
 - http
 produces:
@@ -18,12 +15,37 @@ produces:
 consumes:
 - application/json
 paths:
-  /{name}:
+  /v1/shortLinks:
+    post:
+      summary: Create Link
+      description: |-
+        Creates a short Dynamic Link given either a valid long Dynamic Link or
+        details such as Dynamic Link domain, Android and iOS app information.
+        The created short Dynamic Link will not expire.
+
+        Repeated calls with the same long Dynamic Link or Dynamic Link information
+        will produce the same short Dynamic Link.
+
+        The Dynamic Link domain in the request must be owned by requester's
+        Firebase project.
+      operationId: firebasedynamiclinks.shortLinks.create
+      x-api-path-slug: v1shortlinks-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Shortened Link
+  /v1/{name}:
     delete:
-      summary: Delete Name
+      summary: Delete Release
       description: Delete a `Release` by resource name.
-      operationId: deleteName
-      x-api-path-slug: name-delete
+      operationId: firebaserules.projects.releases.delete
+      x-api-path-slug: v1name-delete
       parameters:
       - in: path
         name: name
@@ -32,12 +54,12 @@ paths:
         200:
           description: OK
       tags:
-      - Name
+      - Release
     get:
-      summary: Get Name
+      summary: Get Release
       description: Get a `Release` by name.
-      operationId: getName
-      x-api-path-slug: name-get
+      operationId: firebaserules.projects.releases.get
+      x-api-path-slug: v1name-get
       parameters:
       - in: path
         name: name
@@ -46,27 +68,17 @@ paths:
         200:
           description: OK
       tags:
-      - Name
-    parameters:
-      summary: Parameters Name
-      description: Parameters name.
-      operationId: parametersName
-      x-api-path-slug: name-parameters
-      responses:
-        200:
-          description: OK
-      tags:
-      - Name
-    patch:
-      summary: Patch Name
+      - Release
+    put:
+      summary: Update Release
       description: |-
-        Update a `Release` via PATCH.
+        Update a `Release`.
 
-        Only updates to the `ruleset_name` and `test_suite_name` fields will be
-        honored. `Release` rename is not supported. To create a `Release` use the
-        CreateRelease method.
-      operationId: patchName
-      x-api-path-slug: name-patch
+        Only updates to the `ruleset_name` field will be honored. `Release` rename
+        is not supported. To create a `Release` use the CreateRelease method
+        instead.
+      operationId: firebaserules.projects.releases.update
+      x-api-path-slug: v1name-put
       parameters:
       - in: body
         name: body
@@ -74,21 +86,20 @@ paths:
           $ref: '#/definitions/holder'
       - in: path
         name: name
-        description: Resource name for the project which owns this `Release`
+        description: Resource name for the `Release`
       responses:
         200:
           description: OK
       tags:
-      - Name
-  /{name}/releases:
+      - Release
+  /v1/{name}/releases:
     get:
-      summary: Get Name Releases
+      summary: List Releases
       description: |-
         List the `Release` values for a project. This list may optionally be
-        filtered by `Release` name, `Ruleset` name, `TestSuite` name, or any
-        combination thereof.
-      operationId: getNameReleases
-      x-api-path-slug: namereleases-get
+        filtered by `Release` name or `Ruleset` id or both.
+      operationId: firebaserules.projects.releases.list
+      x-api-path-slug: v1namereleases-get
       parameters:
       - in: query
         name: filter
@@ -106,21 +117,9 @@ paths:
         200:
           description: OK
       tags:
-      - Name
-      - Releases
-    parameters:
-      summary: Parameters Name Releases
-      description: Parameters name releases.
-      operationId: parametersNameReleases
-      x-api-path-slug: namereleases-parameters
-      responses:
-        200:
-          description: OK
-      tags:
-      - Name
-      - Releases
+      - Release
     post:
-      summary: Post Name Releases
+      summary: Create Releases
       description: |-
         Create a `Release`.
 
@@ -143,9 +142,10 @@ paths:
         The table reflects the `Ruleset` rollout in progress. The `prod` and
         `prod/beta` releases refer to the same `Ruleset`. However, `prod/v23`
         refers to a new `Ruleset`. The `Ruleset` reference for a `Release` may be
-        updated using the UpdateRelease method.
-      operationId: postNameReleases
-      x-api-path-slug: namereleases-post
+        updated using the UpdateRelease method, and the custom `Release` name
+        may be referenced by specifying the `X-Firebase-Rules-Release-Name` header.
+      operationId: firebaserules.projects.releases.create
+      x-api-path-slug: v1namereleases-post
       parameters:
       - in: body
         name: body
@@ -158,23 +158,19 @@ paths:
         200:
           description: OK
       tags:
-      - Name
-      - Releases
-  /{name}/rulesets:
+      - Release
+  /v1/{name}/rulesets:
     get:
-      summary: Get Name Rulesets
+      summary: List Rules
       description: |-
-        List `Ruleset` metadata only and optionally filter the results by `Ruleset`
+        List `Ruleset` metadata only and optionally filter the results by Ruleset
         name.
 
         The full `Source` contents of a `Ruleset` may be retrieved with
         GetRuleset.
-      operationId: getNameRulesets
-      x-api-path-slug: namerulesets-get
+      operationId: firebaserules.projects.rulesets.list
+      x-api-path-slug: v1namerulesets-get
       parameters:
-      - in: query
-        name: filter
-        description: '`Ruleset` filter'
       - in: path
         name: name
         description: Resource name for the project
@@ -188,21 +184,9 @@ paths:
         200:
           description: OK
       tags:
-      - Name
-      - Rulesets
-    parameters:
-      summary: Parameters Name Rulesets
-      description: Parameters name rulesets.
-      operationId: parametersNameRulesets
-      x-api-path-slug: namerulesets-parameters
-      responses:
-        200:
-          description: OK
-      tags:
-      - Name
-      - Rulesets
+      - Rules
     post:
-      summary: Post Name Rulesets
+      summary: Create Rules
       description: |-
         Create a `Ruleset` from `Source`.
 
@@ -210,8 +194,8 @@ paths:
         caller. `Source` containing syntactic or semantics errors will result in an
         error response indicating the first error encountered. For a detailed view
         of `Source` issues, use TestRuleset.
-      operationId: postNameRulesets
-      x-api-path-slug: namerulesets-post
+      operationId: firebaserules.projects.rulesets.create
+      x-api-path-slug: v1namerulesets-post
       parameters:
       - in: body
         name: body
@@ -224,59 +208,19 @@ paths:
         200:
           description: OK
       tags:
-      - Name
-      - Rulesets
-  /{name}:getExecutable:
-    get:
-      summary: Get Name Getexecutable
-      description: Get the `Release` executable to use when enforcing rules.
-      operationId: getNameGetexecutable
-      x-api-path-slug: namegetexecutable-get
-      parameters:
-      - in: query
-        name: executableVersion
-        description: The requested runtime executable version
-      - in: path
-        name: name
-        description: Resource name of the `Release`
-      responses:
-        200:
-          description: OK
-      tags:
-      - Names
-      - Executables
-    parameters:
-      summary: Parameters Name Getexecutable
-      description: Parameters name getexecutable.
-      operationId: parametersNameGetexecutable
-      x-api-path-slug: namegetexecutable-parameters
-      responses:
-        200:
-          description: OK
-      tags:
-      - Names
-      - Executables
-  /{name}:test:
-    parameters:
-      summary: Parameters Name Test
-      description: Parameters name test.
-      operationId: parametersNameTest
-      x-api-path-slug: nametest-parameters
-      responses:
-        200:
-          description: OK
-      tags:
-      - Names
+      - Rules
+  /v1/{name}:test:
     post:
-      summary: Post Name Test
+      summary: Test  Rule
       description: |-
-        Test `Source` for syntactic and semantic correctness. Issues present, if
-        any, will be returned to the caller with a description, severity, and
-        source location.
+        Test `Source` for syntactic and semantic correctness. Issues present in the
+        rules, if any, will be returned to the caller with a description, severity,
+        and source location.
 
-        The test method may be executed with `Source` or a `Ruleset` name.
-        Passing `Source` is useful for unit testing new rules. Passing a `Ruleset`
-        name is useful for regression testing an existing rule.
+        The test method will typically be executed with a developer provided
+        `Source`, but if regression testing is desired, this method may be
+        executed against a `Ruleset` resource name and the `Source` will be
+        retrieved from the persisted `Ruleset`.
 
         The following is an example of `Source` that permits users to upload images
         to a bucket bearing their user id and matching the correct metadata:
@@ -286,14 +230,13 @@ paths:
             // Users are allowed to subscribe and unsubscribe to the blog.
             service firebase.storage {
               match /users/{userId}/images/{imageName} {
-                  allow write: if userId == request.auth.uid
-                      && (imageName.matches('*.png$')
-                      || imageName.matches('*.jpg$'))
-                      && resource.mimeType.matches('^image/')
+                  allow write: if userId == request.userId
+                      && (imageName.endsWith('.png') || imageName.endsWith('.jpg'))
+                      && resource.mimeType.startsWith('image/')
               }
             }
-      operationId: postNameTest
-      x-api-path-slug: nametest-post
+      operationId: firebaserules.projects.test
+      x-api-path-slug: v1nametest-post
       parameters:
       - in: body
         name: body
@@ -301,10 +244,677 @@ paths:
           $ref: '#/definitions/holder'
       - in: path
         name: name
-        description: Tests may either provide `source` or a `Ruleset` resource name
+        description: Name of the project
       responses:
         200:
           description: OK
       tags:
-      - Names
+      - Rules
+  /{projectId}/histories:
+    get:
+      summary: List HIstories
+      description: |-
+        Lists Histories for a given Project.
+
+        The histories are sorted by modification time in descending order. The history_id key will be used to order the history with the same modification time.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
+      operationId: toolresults.projects.histories.list
+      x-api-path-slug: projectidhistories-get
+      parameters:
+      - in: query
+        name: filterByName
+        description: If set, only return histories with the given name
+      - in: query
+        name: pageSize
+        description: The maximum number of Histories to fetch
+      - in: query
+        name: pageToken
+        description: A continuation token to resume the query at the next item
+      - in: path
+        name: projectId
+        description: A Project id
+      responses:
+        200:
+          description: OK
+      tags:
+      - History
+    post:
+      summary: Create History
+      description: |-
+        Creates a History.
+
+        The returned History will have the id set.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does not exist
+      operationId: toolresults.projects.histories.create
+      x-api-path-slug: projectidhistories-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: query
+        name: requestId
+        description: A unique request ID for server to detect duplicated requests
+      responses:
+        200:
+          description: OK
+      tags:
+      - History
+  /{projectId}/histories/{historyId}:
+    get:
+      summary: Get History
+      description: |-
+        Gets a History.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
+      operationId: toolresults.projects.histories.get
+      x-api-path-slug: projectidhistorieshistoryid-get
+      parameters:
+      - in: path
+        name: historyId
+        description: A History id
+      - in: path
+        name: projectId
+        description: A Project id
+      responses:
+        200:
+          description: OK
+      tags:
+      - History
+  /{projectId}/histories/{historyId}/executions:
+    get:
+      summary: Get Executions
+      description: |-
+        Lists Histories for a given Project.
+
+        The executions are sorted by creation_time in descending order. The execution_id key will be used to order the executions with the same creation_time.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
+      operationId: toolresults.projects.histories.executions.list
+      x-api-path-slug: projectidhistorieshistoryidexecutions-get
+      parameters:
+      - in: path
+        name: historyId
+        description: A History id
+      - in: query
+        name: pageSize
+        description: The maximum number of Executions to fetch
+      - in: query
+        name: pageToken
+        description: A continuation token to resume the query at the next item
+      - in: path
+        name: projectId
+        description: A Project id
+      responses:
+        200:
+          description: OK
+      tags:
+      - History
+    post:
+      summary: Create Execution
+      description: |-
+        Creates an Execution.
+
+        The returned Execution will have the id set.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
+      operationId: toolresults.projects.histories.executions.create
+      x-api-path-slug: projectidhistorieshistoryidexecutions-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: historyId
+        description: A History id
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: query
+        name: requestId
+        description: A unique request ID for server to detect duplicated requests
+      responses:
+        200:
+          description: OK
+      tags:
+      - Execution
+  /{projectId}/histories/{historyId}/executions/{executionId}:
+    get:
+      summary: Get Execution
+      description: |-
+        Gets an Execution.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
+      operationId: toolresults.projects.histories.executions.get
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionid-get
+      parameters:
+      - in: path
+        name: executionId
+        description: An Execution id
+      - in: path
+        name: historyId
+        description: A History id
+      - in: path
+        name: projectId
+        description: A Project id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Execution
+    patch:
+      summary: Update Execution
+      description: |-
+        Updates an existing Execution with the supplied partial entity.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal - NOT_FOUND - if the containing History does not exist
+      operationId: toolresults.projects.histories.executions.patch
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionid-patch
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: executionId
+        description: Required
+      - in: path
+        name: historyId
+        description: Required
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: query
+        name: requestId
+        description: A unique request ID for server to detect duplicated requests
+      responses:
+        200:
+          description: OK
+      tags:
+      - Execution
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps:
+    get:
+      summary: Get Execution Steps
+      description: |-
+        Lists Steps for a given Execution.
+
+        The steps are sorted by creation_time in descending order. The step_id key will be used to order the steps with the same creation_time.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid; e.g. if an attempt is made to list the children of a nonexistent Step - NOT_FOUND - if the containing Execution does not exist
+      operationId: toolresults.projects.histories.executions.steps.list
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidsteps-get
+      parameters:
+      - in: path
+        name: executionId
+        description: A Execution id
+      - in: path
+        name: historyId
+        description: A History id
+      - in: query
+        name: pageSize
+        description: The maximum number of Steps to fetch
+      - in: query
+        name: pageToken
+        description: A continuation token to resume the query at the next item
+      - in: path
+        name: projectId
+        description: A Project id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Execution Step
+    post:
+      summary: Create Execution Steps
+      description: |-
+        Creates a Step.
+
+        The returned Step will have the id set.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
+      operationId: toolresults.projects.histories.executions.steps.create
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidsteps-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: executionId
+        description: A Execution id
+      - in: path
+        name: historyId
+        description: A History id
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: query
+        name: requestId
+        description: A unique request ID for server to detect duplicated requests
+      responses:
+        200:
+          description: OK
+      tags:
+      - Execution Step
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:
+    get:
+      summary: Get Execution Step
+      description: |-
+        Gets a Step.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
+      operationId: toolresults.projects.histories.executions.steps.get
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepid-get
+      parameters:
+      - in: path
+        name: executionId
+        description: A Execution id
+      - in: path
+        name: historyId
+        description: A History id
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: path
+        name: stepId
+        description: A Step id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Execution Step
+    patch:
+      summary: Update Execution Step
+      description: |-
+        Updates an existing Step with the supplied partial entity.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal (e.g try to upload a duplicate xml file), if the updated step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
+      operationId: toolresults.projects.histories.executions.steps.patch
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepid-patch
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: executionId
+        description: A Execution id
+      - in: path
+        name: historyId
+        description: A History id
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: query
+        name: requestId
+        description: A unique request ID for server to detect duplicated requests
+      - in: path
+        name: stepId
+        description: A Step id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Execution Step
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary:
+    get:
+      summary: Get Metrics Summary
+      description: |-
+        Retrieves a PerfMetricsSummary.
+
+        May return any of the following error code(s): - NOT_FOUND - The specified PerfMetricsSummary does not exist
+      operationId: toolresults.projects.histories.executions.steps.getPerfMetricsSummary
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfmetricssummary-get
+      parameters:
+      - in: path
+        name: executionId
+        description: A tool results execution ID
+      - in: path
+        name: historyId
+        description: A tool results history ID
+      - in: path
+        name: projectId
+        description: The cloud project
+      - in: path
+        name: stepId
+        description: A tool results step ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Metrics
+    post:
+      summary: Create Metric Summary
+      description: |-
+        Creates a PerfMetricsSummary resource.
+
+        May return any of the following error code(s): - ALREADY_EXISTS - A PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist
+      operationId: toolresults.projects.histories.executions.steps.perfMetricsSummary.create
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfmetricssummary-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: executionId
+        description: A tool results execution ID
+      - in: path
+        name: historyId
+        description: A tool results history ID
+      - in: path
+        name: projectId
+        description: The cloud project
+      - in: path
+        name: stepId
+        description: A tool results step ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Metrics
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries:
+    get:
+      summary: Get Sample Series
+      description: |-
+        Lists PerfSampleSeries for a given Step.
+
+        The request provides an optional filter which specifies one or more PerfMetricsType to include in the result; if none returns all. The resulting PerfSampleSeries are sorted by ids.
+
+        May return any of the following canonical error codes: - NOT_FOUND - The containing Step does not exist
+      operationId: toolresults.projects.histories.executions.steps.perfSampleSeries.list
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseries-get
+      parameters:
+      - in: path
+        name: executionId
+        description: A tool results execution ID
+      - in: query
+        name: filter
+        description: Specify one or more PerfMetricType values such as CPU to filter
+          the result
+      - in: path
+        name: historyId
+        description: A tool results history ID
+      - in: path
+        name: projectId
+        description: The cloud project
+      - in: path
+        name: stepId
+        description: A tool results step ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sample Series
+    post:
+      summary: Create Sample Series
+      description: |-
+        Creates a PerfSampleSeries.
+
+        May return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist
+      operationId: toolresults.projects.histories.executions.steps.perfSampleSeries.create
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseries-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: executionId
+        description: A tool results execution ID
+      - in: path
+        name: historyId
+        description: A tool results history ID
+      - in: path
+        name: projectId
+        description: The cloud project
+      - in: path
+        name: stepId
+        description: A tool results step ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sample Series
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}:
+    get:
+      summary: Get Sample Series
+      description: |-
+        Gets a PerfSampleSeries.
+
+        May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
+      operationId: toolresults.projects.histories.executions.steps.perfSampleSeries.get
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesid-get
+      parameters:
+      - in: path
+        name: executionId
+        description: A tool results execution ID
+      - in: path
+        name: historyId
+        description: A tool results history ID
+      - in: path
+        name: projectId
+        description: The cloud project
+      - in: path
+        name: sampleSeriesId
+        description: A sample series id
+      - in: path
+        name: stepId
+        description: A tool results step ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sample Series
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:
+    get:
+      summary: Get Sample Series
+      description: |-
+        Lists the Performance Samples of a given Sample Series - The list results are sorted by timestamps ascending - The default page size is 500 samples; and maximum size allowed 5000 - The response token indicates the last returned PerfSample timestamp - When the results size exceeds the page size, submit a subsequent request including the page token to return the rest of the samples up to the page limit
+
+        May return any of the following canonical error codes: - OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The containing PerfSampleSeries does not exist
+      operationId: toolresults.projects.histories.executions.steps.perfSampleSeries.samples.list
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesidsamples-get
+      parameters:
+      - in: path
+        name: executionId
+        description: A tool results execution ID
+      - in: path
+        name: historyId
+        description: A tool results history ID
+      - in: query
+        name: pageSize
+        description: The default page size is 500 samples, and the maximum size is
+          5000
+      - in: query
+        name: pageToken
+        description: Optional, the next_page_token returned in the previous response
+      - in: path
+        name: projectId
+        description: The cloud project
+      - in: path
+        name: sampleSeriesId
+        description: A sample series id
+      - in: path
+        name: stepId
+        description: A tool results step ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sample Series
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate:
+    post:
+      summary: Create Sample
+      description: |-
+        Creates a batch of PerfSamples - a client can submit multiple batches of Perf Samples through repeated calls to this method in order to split up a large request payload - duplicates and existing timestamp entries will be ignored. - the batch operation may partially succeed - the set of elements successfully inserted is returned in the response (omits items which already existed in the database).
+
+        May return any of the following canonical error codes: - NOT_FOUND - The containing PerfSampleSeries does not exist
+      operationId: toolresults.projects.histories.executions.steps.perfSampleSeries.samples.batchCreate
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesidsamplesbatchcreate-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: executionId
+        description: A tool results execution ID
+      - in: path
+        name: historyId
+        description: A tool results history ID
+      - in: path
+        name: projectId
+        description: The cloud project
+      - in: path
+        name: sampleSeriesId
+        description: A sample series id
+      - in: path
+        name: stepId
+        description: A tool results step ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Sample Series
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails:
+    get:
+      summary: Get Thumbnails
+      description: |-
+        Lists thumbnails of images attached to a step.
+
+        May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read from the project, or from any of the images - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not exist, or if any of the images do not exist
+      operationId: toolresults.projects.histories.executions.steps.thumbnails.list
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidthumbnails-get
+      parameters:
+      - in: path
+        name: executionId
+        description: An Execution id
+      - in: path
+        name: historyId
+        description: A History id
+      - in: query
+        name: pageSize
+        description: The maximum number of thumbnails to fetch
+      - in: query
+        name: pageToken
+        description: A continuation token to resume the query at the next item
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: path
+        name: stepId
+        description: A Step id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thumbnail
+  /{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles:
+    post:
+      summary: Publish XML Files
+      description: |-
+        Publish xml files to an existing Step.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal, e.g try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing Execution does not exist
+      operationId: toolresults.projects.histories.executions.steps.publishXunitXmlFiles
+      x-api-path-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidpublishxunitxmlfiles-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: executionId
+        description: A Execution id
+      - in: path
+        name: historyId
+        description: A History id
+      - in: path
+        name: projectId
+        description: A Project id
+      - in: path
+        name: stepId
+        description: A Step id
+      responses:
+        200:
+          description: OK
+      tags:
+      - XML File
+  /{projectId}/settings:
+    get:
+      summary: Get Project Settings
+      description: |-
+        Gets the Tool Results settings for a project.
+
+        May return any of the following canonical error codes:
+
+        - PERMISSION_DENIED - if the user is not authorized to read from project
+      operationId: toolresults.projects.getSettings
+      x-api-path-slug: projectidsettings-get
+      parameters:
+      - in: path
+        name: projectId
+        description: A Project id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Project
+  /{projectId}:initializeSettings:
+    post:
+      summary: Initialize Settings
+      description: |-
+        Creates resources for settings which have not yet been set.
+
+        Currently, this creates a single resource: a Google Cloud Storage bucket, to be used as the default bucket for this project. The bucket is created in the name of the user calling. Except in rare cases, calling this method in parallel from multiple clients will only create a single bucket. In order to avoid unnecessary storage charges, the bucket is configured to automatically delete objects older than 90 days.
+
+        The bucket is created with the project-private ACL: All project team members are given permissions to the bucket and objects created within it according to their roles. Project owners have owners rights, and so on. The default ACL on objects created in the bucket is project-private as well. See Google Cloud Storage documentation for more details.
+
+        If there is already a default bucket set and the project can access the bucket, this call does nothing. However, if the project doesn't have the permission to access the bucket or the bucket is deteleted, a new bucket will be created.
+
+        May return any canonical error codes, including the following:
+
+        - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised by Google Cloud Storage
+      operationId: toolresults.projects.initializeSettings
+      x-api-path-slug: projectidinitializesettings-post
+      parameters:
+      - in: path
+        name: projectId
+        description: A Project id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Project
 ---

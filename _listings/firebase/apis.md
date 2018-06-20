@@ -1,15 +1,14 @@
 ---
 name: Firebase
 x-slug: firebase
-description: Firebase is a mobile platform that helps you quicklydevelophigh-quality
-  apps,growyour user base, andearnmore money. Firebase is made up of complementary
-  features that you can mix-and-match to fit your needs.
+description: Firebase is a mobile platform that gives developers the tools and infrastructure
+  to build better apps and grow successful businesses.
 image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
 x-kinRank: "9"
-x-alexaRank: ""
+x-alexaRank: "1"
 tags: Firebase
-created: "2018-05-21"
-modified: "2018-05-21"
+created: "2018-06-20"
+modified: "2018-06-20"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/apis.md
 specificationVersion: "0.14"
 apis:
@@ -26,7 +25,7 @@ apis:
     The Dynamic Link domain in the request must be owned by requester's
     Firebase project.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/shortLinks
   tags: Shortened Link
   properties:
@@ -36,7 +35,7 @@ apis:
   x-api-slug: firebase
   description: Delete a `Release` by resource name.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}
   tags: Release
   properties:
@@ -46,7 +45,7 @@ apis:
   x-api-slug: firebase
   description: Get a `Release` by name.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}
   tags: Release
   properties:
@@ -61,7 +60,7 @@ apis:
     is not supported. To create a `Release` use the CreateRelease method
     instead.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}
   tags: Release
   properties:
@@ -73,7 +72,7 @@ apis:
     List the `Release` values for a project. This list may optionally be
     filtered by `Release` name or `Ruleset` id or both.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}/releases
   tags: Release
   properties:
@@ -106,7 +105,7 @@ apis:
     updated using the UpdateRelease method, and the custom `Release` name
     may be referenced by specifying the `X-Firebase-Rules-Release-Name` header.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}/releases
   tags: Release
   properties:
@@ -121,7 +120,7 @@ apis:
     The full `Source` contents of a `Ruleset` may be retrieved with
     GetRuleset.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}/rulesets
   tags: Rules
   properties:
@@ -137,7 +136,7 @@ apis:
     error response indicating the first error encountered. For a detailed view
     of `Source` issues, use TestRuleset.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}/rulesets
   tags: Rules
   properties:
@@ -169,7 +168,7 @@ apis:
           }
         }
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////v1/{name}:test
   tags: Rules
   properties:
@@ -186,7 +185,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories
   tags: History
   properties:
@@ -203,7 +202,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories
   tags: History
   properties:
@@ -218,7 +217,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}
   tags: History
   properties:
@@ -235,7 +234,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions
   tags: History
   properties:
@@ -252,7 +251,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions
   tags: Execution
   properties:
@@ -267,7 +266,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}
   tags: Execution
   properties:
@@ -282,7 +281,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal - NOT_FOUND - if the containing History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}
   tags: Execution
   properties:
@@ -299,7 +298,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid; e.g. if an attempt is made to list the children of a nonexistent Step - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps
   tags: Execution Step
   properties:
@@ -316,7 +315,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps
   tags: Execution Step
   properties:
@@ -331,7 +330,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}
   tags: Execution Step
   properties:
@@ -346,7 +345,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal (e.g try to upload a duplicate xml file), if the updated step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}
   tags: Execution Step
   properties:
@@ -359,7 +358,7 @@ apis:
 
     May return any of the following error code(s): - NOT_FOUND - The specified PerfMetricsSummary does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary
   tags: Metrics
   properties:
@@ -372,7 +371,7 @@ apis:
 
     May return any of the following error code(s): - ALREADY_EXISTS - A PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary
   tags: Metrics
   properties:
@@ -387,7 +386,7 @@ apis:
 
     May return any of the following canonical error codes: - NOT_FOUND - The containing Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries
   tags: Sample Series
   properties:
@@ -402,7 +401,7 @@ apis:
 
     May return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries
   tags: Sample Series
   properties:
@@ -415,7 +414,7 @@ apis:
 
     May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}
   tags: Sample Series
   properties:
@@ -428,7 +427,7 @@ apis:
 
     May return any of the following canonical error codes: - OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The containing PerfSampleSeries does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples
   tags: Sample Series
   properties:
@@ -441,7 +440,7 @@ apis:
 
     May return any of the following canonical error codes: - NOT_FOUND - The containing PerfSampleSeries does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate
   tags: Sample Series
   properties:
@@ -454,7 +453,7 @@ apis:
 
     May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read from the project, or from any of the images - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not exist, or if any of the images do not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails
   tags: Thumbnail
   properties:
@@ -469,7 +468,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal, e.g try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles
   tags: XML File
   properties:
@@ -484,7 +483,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to read from project
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}/settings
   tags: Project
   properties:
@@ -505,7 +504,7 @@ apis:
 
     - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised by Google Cloud Storage
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}////{projectId}:initializeSettings
   tags: Project
   properties:
@@ -513,388 +512,18 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidinitializesettings-post-openapi.md
 - name: Firebase
   x-api-slug: firebase
-  description: Firebase is a mobile platform that helps you quicklydevelophigh-quality
-    apps,growyour user base, andearnmore money. Firebase is made up of complementary
-    features that you can mix-and-match to fit your needs.
+  description: Firebase is a mobile platform that gives developers the tools and infrastructure
+    to build better apps and grow successful businesses.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
+  humanURL: https://Firebase.google.com
   baseURL: https://{project_id].firebaseio.co}//
   tags: Firebase
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/openapi.md
-- name: Firebase Dynamic Links Post Installattribution
-  x-api-slug: firebase-dynamic-links
-  description: Get iOS strong/weak-match info for post-install attribution.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebasedynamiclinks-ipv6.googleapis.com/v1///installAttribution
-  tags: Dynammic,Links
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/installattribution-post-openapi.md
-- name: Firebase Dynamic Links Post Managedshortlinks Create
-  x-api-slug: firebase-dynamic-links
-  description: |-
-    Creates a managed short Dynamic Link given either a valid long Dynamic Link
-    or details such as Dynamic Link domain, Android and iOS app information.
-    The created short Dynamic Link will not expire.
-
-    This differs from CreateShortDynamicLink in the following ways:
-      - The request will also contain a name for the link (non unique name
-        for the front end).
-      - The response must be authenticated with an auth token (generated with
-        the admin service account).
-      - The link will appear in the FDL list of links in the console front end.
-
-    The Dynamic Link domain in the request must be owned by requester's
-    Firebase project.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebasedynamiclinks-ipv6.googleapis.com/v1///managedShortLinks:create
-  tags: Dynammic,Links
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/managedshortlinkscreate-post-openapi.md
-- name: Firebase Dynamic Links Post Shortlinks
-  x-api-slug: firebase-dynamic-links
-  description: |-
-    Creates a short Dynamic Link given either a valid long Dynamic Link or
-    details such as Dynamic Link domain, Android and iOS app information.
-    The created short Dynamic Link will not expire.
-
-    Repeated calls with the same long Dynamic Link or Dynamic Link information
-    will produce the same short Dynamic Link.
-
-    The Dynamic Link domain in the request must be owned by requester's
-    Firebase project.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebasedynamiclinks-ipv6.googleapis.com/v1///shortLinks
-  tags: Dynammic,Links
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/shortlinks-post-openapi.md
-- name: Firebase Dynamic Links Get Dynamiclink Linkstats
-  x-api-slug: firebase-dynamic-links
-  description: |-
-    Fetches analytics stats of a short Dynamic Link for a given
-    duration. Metrics include number of clicks, redirects, installs,
-    app first opens, and app reopens.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebasedynamiclinks-ipv6.googleapis.com/v1///{dynamicLink}/linkStats
-  tags: Dynammic,Links,Statistics
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/dynamiclinklinkstats-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/dynamiclinklinkstats-get-openapi.md
-- name: Firebase Dynamic Links
-  x-api-slug: firebase-dynamic-links
-  description: Firebase is a mobile platform that helps you quicklydevelophigh-quality
-    apps,growyour user base, andearnmore money. Firebase is made up of complementary
-    features that you can mix-and-match to fit your needs.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebasedynamiclinks-ipv6.googleapis.com/v1/
-  tags: Firebase
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/openapi.md
-- name: Firebase Remote Config Get Project Remoteconfig
-  x-api-slug: firebase-remote-config
-  description: |-
-    Get the latest version Remote Configuration for a project.
-    Returns the RemoteConfig as the payload, and also the eTag as a
-    response header.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaseremoteconfig.googleapis.com/v1///{project}/remoteConfig
-  tags: Project,Remote,Config
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectremoteconfig-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectremoteconfig-get-openapi.md
-- name: Firebase Remote Config Parameters Project Remoteconfig
-  x-api-slug: firebase-remote-config
-  description: Parameters project remoteconfig.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaseremoteconfig.googleapis.com/v1///{project}/remoteConfig
-  tags: Project,Remote,Config
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectremoteconfig-parameters-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectremoteconfig-parameters-openapi.md
-- name: Firebase Remote Config Put Project Remoteconfig
-  x-api-slug: firebase-remote-config
-  description: |-
-    Update a RemoteConfig. We treat this as an always-existing
-    resource (when it is not found in our data store, we treat it as version
-    0, a template with zero conditions and zero parameters). Hence there are
-    no Create or Delete operations. Returns the updated template when
-    successful (and the updated eTag as a response header), or an error if
-    things go wrong.
-    Possible error messages:
-    * VALIDATION_ERROR (HTTP status 400) with additional details if the
-    template being passed in can not be validated.
-    * AUTHENTICATION_ERROR (HTTP status 401) if the request can not be
-    authenticate (e.g. no access token, or invalid access token).
-    * AUTHORIZATION_ERROR (HTTP status 403) if the request can not be
-    authorized (e.g. the user has no access to the specified project id).
-    * VERSION_MISMATCH (HTTP status 412) when trying to update when the
-    expected eTag (passed in via the "If-match" header) is not specified, or
-    is specified but does does not match the current eTag.
-    * Internal error (HTTP status 500) for Database problems or other internal
-    errors.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaseremoteconfig.googleapis.com/v1///{project}/remoteConfig
-  tags: Project,Remote,Config
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectremoteconfig-put-openapi.md
-- name: Firebase Remote Config
-  x-api-slug: firebase-remote-config
-  description: Firebase is a mobile platform that helps you quicklydevelophigh-quality
-    apps,growyour user base, andearnmore money. Firebase is made up of complementary
-    features that you can mix-and-match to fit your needs.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaseremoteconfig.googleapis.com/v1/
-  tags: Firebase
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/openapi.md
-- name: Firebase Rules Delete Name
-  x-api-slug: firebase-rules
-  description: Delete a `Release` by resource name.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}
-  tags: Name
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/name-delete-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/name-delete-openapi.md
-- name: Firebase Rules Get Name
-  x-api-slug: firebase-rules
-  description: Get a `Release` by name.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}
-  tags: Name
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/name-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/name-get-openapi.md
-- name: Firebase Rules Parameters Name
-  x-api-slug: firebase-rules
-  description: Parameters name.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}
-  tags: Name
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/name-parameters-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/name-parameters-openapi.md
-- name: Firebase Rules Patch Name
-  x-api-slug: firebase-rules
-  description: |-
-    Update a `Release` via PATCH.
-
-    Only updates to the `ruleset_name` and `test_suite_name` fields will be
-    honored. `Release` rename is not supported. To create a `Release` use the
-    CreateRelease method.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}
-  tags: Name
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/name-patch-openapi.md
-- name: Firebase Rules Get Name Releases
-  x-api-slug: firebase-rules
-  description: |-
-    List the `Release` values for a project. This list may optionally be
-    filtered by `Release` name, `Ruleset` name, `TestSuite` name, or any
-    combination thereof.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}/releases
-  tags: Name,Releases
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namereleases-get-openapi.md
-- name: Firebase Rules Parameters Name Releases
-  x-api-slug: firebase-rules
-  description: Parameters name releases.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}/releases
-  tags: Name,Releases
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namereleases-parameters-openapi.md
-- name: Firebase Rules Post Name Releases
-  x-api-slug: firebase-rules
-  description: |-
-    Create a `Release`.
-
-    Release names should reflect the developer's deployment practices. For
-    example, the release name may include the environment name, application
-    name, application version, or any other name meaningful to the developer.
-    Once a `Release` refers to a `Ruleset`, the rules can be enforced by
-    Firebase Rules-enabled services.
-
-    More than one `Release` may be 'live' concurrently. Consider the following
-    three `Release` names for `projects/foo` and the `Ruleset` to which they
-    refer.
-
-    Release Name                    | Ruleset Name
-    --------------------------------|-------------
-    projects/foo/releases/prod      | projects/foo/rulesets/uuid123
-    projects/foo/releases/prod/beta | projects/foo/rulesets/uuid123
-    projects/foo/releases/prod/v23  | projects/foo/rulesets/uuid456
-
-    The table reflects the `Ruleset` rollout in progress. The `prod` and
-    `prod/beta` releases refer to the same `Ruleset`. However, `prod/v23`
-    refers to a new `Ruleset`. The `Ruleset` reference for a `Release` may be
-    updated using the UpdateRelease method.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}/releases
-  tags: Name,Releases
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namereleases-post-openapi.md
-- name: Firebase Rules Get Name Rulesets
-  x-api-slug: firebase-rules
-  description: |-
-    List `Ruleset` metadata only and optionally filter the results by `Ruleset`
-    name.
-
-    The full `Source` contents of a `Ruleset` may be retrieved with
-    GetRuleset.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}/rulesets
-  tags: Name,Rulesets
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namerulesets-get-openapi.md
-- name: Firebase Rules Parameters Name Rulesets
-  x-api-slug: firebase-rules
-  description: Parameters name rulesets.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}/rulesets
-  tags: Name,Rulesets
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namerulesets-parameters-openapi.md
-- name: Firebase Rules Post Name Rulesets
-  x-api-slug: firebase-rules
-  description: |-
-    Create a `Ruleset` from `Source`.
-
-    The `Ruleset` is given a unique generated name which is returned to the
-    caller. `Source` containing syntactic or semantics errors will result in an
-    error response indicating the first error encountered. For a detailed view
-    of `Source` issues, use TestRuleset.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}/rulesets
-  tags: Name,Rulesets
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namerulesets-post-openapi.md
-- name: Firebase Rules Get Name Getexecutable
-  x-api-slug: firebase-rules
-  description: Get the `Release` executable to use when enforcing rules.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}:getExecutable
-  tags: Names,Executables
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namegetexecutable-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namegetexecutable-get-openapi.md
-- name: Firebase Rules Parameters Name Getexecutable
-  x-api-slug: firebase-rules
-  description: Parameters name getexecutable.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}:getExecutable
-  tags: Names,Executables
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namegetexecutable-parameters-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/namegetexecutable-parameters-openapi.md
-- name: Firebase Rules Parameters Name Test
-  x-api-slug: firebase-rules
-  description: Parameters name test.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}:test
-  tags: Names
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/nametest-parameters-openapi.md
-- name: Firebase Rules Post Name Test
-  x-api-slug: firebase-rules
-  description: |-
-    Test `Source` for syntactic and semantic correctness. Issues present, if
-    any, will be returned to the caller with a description, severity, and
-    source location.
-
-    The test method may be executed with `Source` or a `Ruleset` name.
-    Passing `Source` is useful for unit testing new rules. Passing a `Ruleset`
-    name is useful for regression testing an existing rule.
-
-    The following is an example of `Source` that permits users to upload images
-    to a bucket bearing their user id and matching the correct metadata:
-
-    _*Example*_
-
-        // Users are allowed to subscribe and unsubscribe to the blog.
-        service firebase.storage {
-          match /users/{userId}/images/{imageName} {
-              allow write: if userId == request.auth.uid
-                  && (imageName.matches('*.png$')
-                  || imageName.matches('*.jpg$'))
-                  && resource.mimeType.matches('^image/')
-          }
-        }
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1///{name}:test
-  tags: Names
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/nametest-post-openapi.md
-- name: Firebase Rules
-  x-api-slug: firebase-rules
-  description: Firebase is a mobile platform that helps you quicklydevelophigh-quality
-    apps,growyour user base, andearnmore money. Firebase is made up of complementary
-    features that you can mix-and-match to fit your needs.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://firebase.google.com/
-  baseURL: https://firebaserules.googleapis.com/v1/
-  tags: Firebase
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/openapi.md
 x-common:
+- type: x-website
+  url: https://Firebase.google.com
 - type: x-blog
   url: https://firebase.googleblog.com/
 - type: x-blog-rss
@@ -905,6 +534,8 @@ x-common:
   url: https://firebase.google.com/support/releases
 - type: x-code
   url: https://firebase.google.com/docs/libraries/
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/google
 - type: x-documentation
   url: https://firebase.google.com/docs/
 - type: x-faq
@@ -923,6 +554,8 @@ x-common:
   url: https://firebase.google.com/support/contact/bugs-features
 - type: x-support
   url: https://firebase.google.com/support/
+- type: x-twitter
+  url: https://twitter.com/Google
 - type: x-twitter
   url: https://twitter.com/firebase
 - type: x-website

@@ -1,0 +1,33 @@
+{
+	"name": "Streadata.io API Gallery - Firebase",
+	"description": "This is a repository of firebase APIs, self-contained as a Github repository, with HTML and YAML representations of the APIs and their surrounding operations.",
+	"image": "http://template.streamdata.gallery/assets/firebase.png",
+	"created": "2018-02-24",
+	"modified": "2018-08-30",
+	"url": "http://firebase.streamdata.gallery/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [
+		{
+			"name": "Firebase",
+			"x-api-slug": "firebase",
+			"description": "Firebase is a mobile platform that gives developers the tools and infrastructure to build better apps and grow successful businesses.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png",
+			"humanURL": "https://Firebase.google.com",
+			"baseURL": "https://{project_id].firebaseio.co}//",
+			"tags": "Firebase",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/openapi.md"
+				}
+			]
+		}
+	],
+	"tags": "Firebase",
+	"include": [
+		{
+			"name": "Firebase",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/apis.yaml"
+		}
+	]
+}

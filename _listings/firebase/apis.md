@@ -7,13 +7,13 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "9"
 x-alexaRank: "1"
 tags: Firebase
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-30"
+modified: "2018-08-30"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Firebase Create Link
-  x-api-slug: firebase
+- name: Firebase - Create Link
+  x-api-slug: v1shortlinks-post
   description: |-
     Creates a short Dynamic Link given either a valid long Dynamic Link or
     details such as Dynamic Link domain, Android and iOS app information.
@@ -26,33 +26,36 @@ apis:
     Firebase project.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/shortLinks
-  tags: Shortened Link
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1shortlinks-post-openapi.md
-- name: Firebase Delete Release
-  x-api-slug: firebase
+- name: Firebase - Delete Release
+  x-api-slug: v1name-delete
   description: Delete a `Release` by resource name.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}
-  tags: Release
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1name-delete-openapi.md
-- name: Firebase Get Release
-  x-api-slug: firebase
+- name: Firebase - Get Release
+  x-api-slug: v1name-get
   description: Get a `Release` by name.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}
-  tags: Release
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1name-get-openapi.md
-- name: Firebase Update Release
-  x-api-slug: firebase
+- name: Firebase - Update Release
+  x-api-slug: v1name-put
   description: |-
     Update a `Release`.
 
@@ -61,25 +64,27 @@ apis:
     instead.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}
-  tags: Release
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1name-put-openapi.md
-- name: Firebase List Releases
-  x-api-slug: firebase
+- name: Firebase - List Releases
+  x-api-slug: v1namereleases-get
   description: |-
     List the `Release` values for a project. This list may optionally be
     filtered by `Release` name or `Ruleset` id or both.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}/releases
-  tags: Release
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1namereleases-get-openapi.md
-- name: Firebase Create Releases
-  x-api-slug: firebase
+- name: Firebase - Create Releases
+  x-api-slug: v1namereleases-post
   description: |-
     Create a `Release`.
 
@@ -106,13 +111,14 @@ apis:
     may be referenced by specifying the `X-Firebase-Rules-Release-Name` header.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}/releases
-  tags: Release
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1namereleases-post-openapi.md
-- name: Firebase List Rules
-  x-api-slug: firebase
+- name: Firebase - List Rules
+  x-api-slug: v1namerulesets-get
   description: |-
     List `Ruleset` metadata only and optionally filter the results by Ruleset
     name.
@@ -121,13 +127,14 @@ apis:
     GetRuleset.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}/rulesets
-  tags: Rules
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1namerulesets-get-openapi.md
-- name: Firebase Create Rules
-  x-api-slug: firebase
+- name: Firebase - Create Rules
+  x-api-slug: v1namerulesets-post
   description: |-
     Create a `Ruleset` from `Source`.
 
@@ -137,13 +144,14 @@ apis:
     of `Source` issues, use TestRuleset.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}/rulesets
-  tags: Rules
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1namerulesets-post-openapi.md
-- name: Firebase Test  Rule
-  x-api-slug: firebase
+- name: Firebase - Test  Rule
+  x-api-slug: v1nametest-post
   description: |-
     Test `Source` for syntactic and semantic correctness. Issues present in the
     rules, if any, will be returned to the caller with a description, severity,
@@ -169,13 +177,14 @@ apis:
         }
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////v1/{name}:test
-  tags: Rules
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/v1nametest-post-openapi.md
-- name: Firebase List HIstories
-  x-api-slug: firebase
+- name: Firebase - List HIstories
+  x-api-slug: projectidhistories-get
   description: |-
     Lists Histories for a given Project.
 
@@ -186,13 +195,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories
-  tags: History
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistories-get-openapi.md
-- name: Firebase Create History
-  x-api-slug: firebase
+- name: Firebase - Create History
+  x-api-slug: projectidhistories-post
   description: |-
     Creates a History.
 
@@ -203,13 +213,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories
-  tags: History
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistories-post-openapi.md
-- name: Firebase Get History
-  x-api-slug: firebase
+- name: Firebase - Get History
+  x-api-slug: projectidhistorieshistoryid-get
   description: |-
     Gets a History.
 
@@ -218,13 +229,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}
-  tags: History
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryid-get-openapi.md
-- name: Firebase Get Executions
-  x-api-slug: firebase
+- name: Firebase - Get Executions
+  x-api-slug: projectidhistorieshistoryidexecutions-get
   description: |-
     Lists Histories for a given Project.
 
@@ -235,13 +247,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions
-  tags: History
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutions-get-openapi.md
-- name: Firebase Create Execution
-  x-api-slug: firebase
+- name: Firebase - Create Execution
+  x-api-slug: projectidhistorieshistoryidexecutions-post
   description: |-
     Creates an Execution.
 
@@ -252,13 +265,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions
-  tags: Execution
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutions-post-openapi.md
-- name: Firebase Get Execution
-  x-api-slug: firebase
+- name: Firebase - Get Execution
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionid-get
   description: |-
     Gets an Execution.
 
@@ -267,13 +281,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}
-  tags: Execution
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionid-get-openapi.md
-- name: Firebase Update Execution
-  x-api-slug: firebase
+- name: Firebase - Update Execution
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionid-patch
   description: |-
     Updates an existing Execution with the supplied partial entity.
 
@@ -282,13 +297,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal - NOT_FOUND - if the containing History does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}
-  tags: Execution
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionid-patch-openapi.md
-- name: Firebase Get Execution Steps
-  x-api-slug: firebase
+- name: Firebase - Get Execution Steps
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidsteps-get
   description: |-
     Lists Steps for a given Execution.
 
@@ -299,13 +315,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid; e.g. if an attempt is made to list the children of a nonexistent Step - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps
-  tags: Execution Step
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidsteps-get-openapi.md
-- name: Firebase Create Execution Steps
-  x-api-slug: firebase
+- name: Firebase - Create Execution Steps
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidsteps-post
   description: |-
     Creates a Step.
 
@@ -316,13 +333,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps
-  tags: Execution Step
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidsteps-post-openapi.md
-- name: Firebase Get Execution Step
-  x-api-slug: firebase
+- name: Firebase - Get Execution Step
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepid-get
   description: |-
     Gets a Step.
 
@@ -331,13 +349,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}
-  tags: Execution Step
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepid-get-openapi.md
-- name: Firebase Update Execution Step
-  x-api-slug: firebase
+- name: Firebase - Update Execution Step
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepid-patch
   description: |-
     Updates an existing Step with the supplied partial entity.
 
@@ -346,39 +365,42 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal (e.g try to upload a duplicate xml file), if the updated step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}
-  tags: Execution Step
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepid-patch-openapi.md
-- name: Firebase Get Metrics Summary
-  x-api-slug: firebase
+- name: Firebase - Get Metrics Summary
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfmetricssummary-get
   description: |-
     Retrieves a PerfMetricsSummary.
 
     May return any of the following error code(s): - NOT_FOUND - The specified PerfMetricsSummary does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary
-  tags: Metrics
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfmetricssummary-get-openapi.md
-- name: Firebase Create Metric Summary
-  x-api-slug: firebase
+- name: Firebase - Create Metric Summary
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfmetricssummary-post
   description: |-
     Creates a PerfMetricsSummary resource.
 
     May return any of the following error code(s): - ALREADY_EXISTS - A PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary
-  tags: Metrics
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfmetricssummary-post-openapi.md
-- name: Firebase Get Sample Series
-  x-api-slug: firebase
+- name: Firebase - Get Sample Series
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseries-get
   description: |-
     Lists PerfSampleSeries for a given Step.
 
@@ -387,80 +409,86 @@ apis:
     May return any of the following canonical error codes: - NOT_FOUND - The containing Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries
-  tags: Sample Series
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseries-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseries-get-openapi.md
-- name: Firebase Create Sample Series
-  x-api-slug: firebase
+- name: Firebase - Create Sample Series
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseries-post
   description: |-
     Creates a PerfSampleSeries.
 
     May return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries
-  tags: Sample Series
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseries-post-openapi.md
-- name: Firebase Get Sample Series
-  x-api-slug: firebase
+- name: Firebase - Get Sample Series
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesid-get
   description: |-
     Gets a PerfSampleSeries.
 
     May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}
-  tags: Sample Series
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesid-get-openapi.md
-- name: Firebase Get Sample Series
-  x-api-slug: firebase
+- name: Firebase - Get Sample Series
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesidsamples-get
   description: |-
     Lists the Performance Samples of a given Sample Series - The list results are sorted by timestamps ascending - The default page size is 500 samples; and maximum size allowed 5000 - The response token indicates the last returned PerfSample timestamp - When the results size exceeds the page size, submit a subsequent request including the page token to return the rest of the samples up to the page limit
 
     May return any of the following canonical error codes: - OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The containing PerfSampleSeries does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples
-  tags: Sample Series
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesidsamples-get-openapi.md
-- name: Firebase Create Sample
-  x-api-slug: firebase
+- name: Firebase - Create Sample
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesidsamplesbatchcreate-post
   description: |-
     Creates a batch of PerfSamples - a client can submit multiple batches of Perf Samples through repeated calls to this method in order to split up a large request payload - duplicates and existing timestamp entries will be ignored. - the batch operation may partially succeed - the set of elements successfully inserted is returned in the response (omits items which already existed in the database).
 
     May return any of the following canonical error codes: - NOT_FOUND - The containing PerfSampleSeries does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate
-  tags: Sample Series
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidperfsampleseriessampleseriesidsamplesbatchcreate-post-openapi.md
-- name: Firebase Get Thumbnails
-  x-api-slug: firebase
+- name: Firebase - Get Thumbnails
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidthumbnails-get
   description: |-
     Lists thumbnails of images attached to a step.
 
     May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read from the project, or from any of the images - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not exist, or if any of the images do not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails
-  tags: Thumbnail
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidthumbnails-get-openapi.md
-- name: Firebase Publish XML Files
-  x-api-slug: firebase
+- name: Firebase - Publish XML Files
+  x-api-slug: projectidhistorieshistoryidexecutionsexecutionidstepsstepidpublishxunitxmlfiles-post
   description: |-
     Publish xml files to an existing Step.
 
@@ -469,13 +497,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal, e.g try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing Execution does not exist
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles
-  tags: XML File
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidhistorieshistoryidexecutionsexecutionidstepsstepidpublishxunitxmlfiles-post-openapi.md
-- name: Firebase Get Project Settings
-  x-api-slug: firebase
+- name: Firebase - Get Project Settings
+  x-api-slug: projectidsettings-get
   description: |-
     Gets the Tool Results settings for a project.
 
@@ -484,13 +513,14 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to read from project
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}/settings
-  tags: Project
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidsettings-get-openapi.md
-- name: Firebase Initialize Settings
-  x-api-slug: firebase
+- name: Firebase - Initialize Settings
+  x-api-slug: projectidinitializesettings-post
   description: |-
     Creates resources for settings which have not yet been set.
 
@@ -505,25 +535,23 @@ apis:
     - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised by Google Cloud Storage
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
   humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}////{projectId}:initializeSettings
-  tags: Project
+  baseURL: https://{project_id].firebaseio.co}//
+  tags: Data, Real Time, API Provider, API Service Provider, SDIO Competition, Databases,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/projectidinitializesettings-post-openapi.md
-- name: Firebase
-  x-api-slug: firebase
-  description: Firebase is a mobile platform that gives developers the tools and infrastructure
-    to build better apps and grow successful businesses.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/firebase-logo.png
-  humanURL: https://Firebase.google.com
-  baseURL: https://{project_id].firebaseio.co}//
-  tags: Firebase
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/firebase/master/_listings/firebase/openapi.md
 x-common:
+- type: x-google-firebase
+  url: Hacker News Search
+- type: x-stack-exchange-search
+  url: Google Firebase
 - type: x-website
   url: https://Firebase.google.com
+- type: x-api-gallery
+  url: http://fire.browse.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://firebase.stack.network
 - type: x-blog
   url: https://firebase.googleblog.com/
 - type: x-blog-rss
